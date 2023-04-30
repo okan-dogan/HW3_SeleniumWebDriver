@@ -6,7 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import static org.testng.Assert.*;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static org.testng.Assert.assertEquals;
 
@@ -42,19 +47,19 @@ public class HW3_RegistrationFormTests extends AbstractTestBase{
         String str_option1 = option1.getText();
         String expected1 = "C++";
         assertEquals(expected1, str_option1);
-        assertTrue(option1.isDisplayed());
+        assertEquals(option1.isDisplayed(),true);
 
         WebElement option2 = driver.findElement(By.xpath("//*[@id='inlineCheckbox2']//following-sibling::label"));
         String str_option2 = option2.getText();
         String expected2 = "Java";
         assertEquals(expected2, str_option2);
-        assertTrue(option2.isDisplayed());
+        assertEquals(option2.isDisplayed(),true);
 
         WebElement option3 = driver.findElement(By.xpath("//*[@id='inlineCheckbox3']//following-sibling::label"));
         String str_option3 = option3.getText();
         String expected3 = "JavaScript";
-        assertEquals(expected3, str_option3);
-        assertTrue(option3.isDisplayed());
+        Assert.assertEquals(expected3, str_option3);
+        assertEquals(option3.isDisplayed(),true);
 
     }
 

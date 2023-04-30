@@ -21,12 +21,12 @@ public class Driver {
 
         if(driver==null){
             if(driverName.equals("chrome")){
-                WebDriverManager.chromedriver().version("79").setup();
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--start-maximized");
                 driver = new ChromeDriver(chromeOptions);
             }else if(driverName.equals("chromeheadless")){
-                WebDriverManager.chromedriver().version("79").setup();
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setHeadless(true);
